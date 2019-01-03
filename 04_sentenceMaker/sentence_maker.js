@@ -3,5 +3,11 @@
 
 
 function sentenceMaker() {
-  
+    return Object.values(this)
+    .filter(word=> {
+      return typeof word === 'string';
+    })
+    .reduce((accum, curr) => {
+      return accum + curr;
+    }, 0);
 }
